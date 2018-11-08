@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   // paises: any[] = [];
 
   constructor( private spotify: SpotifyService) {
+    this.spotify.getNewReleases();
 
 
 
