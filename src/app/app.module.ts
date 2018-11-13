@@ -13,7 +13,11 @@ import { importType } from '@angular/compiler/src/output/output_ast';
 
 // Import routes
 import { ROUTES } from './app.routs';
+
 // Services
+
+// Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
 
 
 @NgModule({
@@ -22,7 +26,8 @@ import { ROUTES } from './app.routs';
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule,

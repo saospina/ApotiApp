@@ -16,11 +16,10 @@ export class SpotifyService {
     const URL = `https://api.spotify.com/v1/${ query }`;
 
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer BQBzWbJ76ql3XtP1uHGg0iqdkJcHEm_KNUU-OlLNzbKLtQ-pHnPa1NF4iR_4leQLFl9SYPGInU7LYQJtDPA'
+      'Authorization': 'Bearer BQAkRwD0FVJmJFDRrJK2AcTeu_Ssq5XODYzQk8huvRCHFXYmy_pwypp7ixfl98Q5sS-v8UBv_Jn9W3YGiOg'
     });
 
     return this.http.get( URL, { headers });
-
   }
 
 
@@ -45,11 +44,17 @@ export class SpotifyService {
 
   }
   getArtista( termino: string) {
-    const headers = new HttpHeaders({
-      'Authorization': 'Bearer BQBzWbJ76ql3XtP1uHGg0iqdkJcHEm_KNUU-OlLNzbKLtQ-pHnPa1NF4iR_4leQLFl9SYPGInU7LYQJtDPA'
-    });
-    return this.http.get(`https://api.spotify.com/v1/search?q=${termino}&type=artist&limit=10`, { headers })
-    .pipe( map ( data => data['artists'].items));
+
+    return this.getQuery( `search?q=${termino}&type=artist&limit=10` ).pipe( map( data => {
+      return data['artists'].items;
+     }));
+
+
+    // const headers = new HttpHeaders({
+    //   'Authorization': 'Bearer BQD7luP6w7qL7_qbwPk_m66pu4PL68zFWlSXle1a9CVzQKqkWrwjRbt74hfUgG_x3TbQRob3v-eWNyrbpuE'
+    // });
+    // return this.http.get(`https://api.spotify.com/v1/search?q=${termino}&type=artist&limit=10`, { headers })
+    // .pipe( map ( data => data['artists'].items));
 
   }
 
