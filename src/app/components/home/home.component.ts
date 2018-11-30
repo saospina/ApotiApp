@@ -10,17 +10,24 @@ import { SpotifyService } from '../../services/spotify.service';
 export class HomeComponent implements OnInit {
 
   // paises: any[] = [];
-  nuevasCanciones: any [] = [];
+  nuevasCanciones: any[] = [];
   loading: boolean;
+  error: boolean;
+  mensajeError: string;
 
-  constructor( private spotify: SpotifyService) {
+  constructor(private spotify: SpotifyService) {
 
     this.loading = true;
-    this.spotify.getNewReleases().subscribe( (data: any) => {
-      console.log( data);
+    this.error = false;
+    this.spotify.getNewReleases().subscribe((data: any) => {
+      console.log(data);
       this.nuevasCanciones = data;
-      this.loading = false; 
-      
+      this.loading = false;
+
+    }, (errorServicio) => {
+      this.loading = false;
+      this.error = true;
+      this.mensajeError = errorServicio.error.error.message;
     });
 
 
@@ -28,14 +35,14 @@ export class HomeComponent implements OnInit {
 
 
 
-    
+
     // console.log('Doing a http request');
     // this.http.get('https://restcountries.eu/rest/v2/lang/es').subscribe( (response: any) => {
     //   this.paises = response;
     //   console.log(response);
-      
+
     // });
-   }
+  }
 
   ngOnInit() {
   }
