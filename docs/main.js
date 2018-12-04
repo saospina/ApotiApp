@@ -664,7 +664,7 @@ var SpotifyService = /** @class */ (function () {
     SpotifyService.prototype.getQuery = function (query) {
         var URL = "https://api.spotify.com/v1/" + query;
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
-            'Authorization': 'Bearer BQC62bLGpwa8qs7bUjJhvpKmcOZmUx8VPFJrEJoo7Q7kVGETIHAYq8TBNOHt5W29qVEB_0mNjztHM_LCQik'
+            'Authorization': 'Bearer BQDpVREMKWdnODjsC4R1gNfphC3r2_TNRNzNUfdXAK0QC72S83_9NthX5A0uHIygTQJq6Kv5wjTqy3xEz7U'
         });
         return this.http.get(URL, { headers: headers });
     };
