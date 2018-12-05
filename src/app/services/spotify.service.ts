@@ -22,8 +22,6 @@ export class SpotifyService {
     return this.http.get(URL, { headers });
   }
 
-
-
   getNewReleases() {
     return this.getQuery('browse/new-releases?limit=20').pipe(map(data => {
       return data['albums'].items;
