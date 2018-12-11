@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/sergio/Documents/Udemy/04-spotiapp/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /Users/sergioospina/Documents/Angular/03-SpotiApp/src/styles.css */"./src/styles.css");
 
 
 /***/ })

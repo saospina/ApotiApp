@@ -664,7 +664,7 @@ var SpotifyService = /** @class */ (function () {
     SpotifyService.prototype.getQuery = function (query) {
         var URL = "https://api.spotify.com/v1/" + query;
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
-            'Authorization': 'Bearer BQAF5Pqf5HkwSvbmqKYldzw_WnjuLWVaFTcVbEMTnoUnk48W8PR-6hTDkB838Fav85jvdrHxXCLwTeWxCLY'
+            'Authorization': 'Bearer BQDl3c5bNR_rN76UyUZ8rQBDh-hANbjGY0-bI2cnh0zP_xoXCO4b16FbNGtZ5qMs5LWHUn30jXYsFls3IaI'
         });
         return this.http.get(URL, { headers: headers });
     };
@@ -774,7 +774,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/sergio/Documents/Udemy/04-spotiapp/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/sergioospina/Documents/Angular/03-SpotiApp/src/main.ts */"./src/main.ts");
 
 
 /***/ })
